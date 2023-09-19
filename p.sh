@@ -121,12 +121,12 @@ result(){
 uninstall(){
   docker rm -f $(docker ps -a | grep -w "$NAME" | awk '{print $1}')
   docker rmi -f $(docker images | grep peer2profit/peer2profit_linux | awk '{print $3}')
-  sudo kill -9 $(pidof p2pclient)
+ # sudo kill -9 $(pidof p2pclient)
   PIDS_LIST=$(ps -ef | grep p2pclient | awk '{print $2}')
   for PID in $PID_LIST
   do
     if [ $PID != $$ ]; then
-      kill $PID > /dev/null 2>&1
+     # kill $PID > /dev/null 2>&1
     fi
   done
   FILE_LIST=$(find / -name "p2pclient*")
@@ -152,12 +152,12 @@ check_operating_system
 check_ipv4
 check_virt
 input_token
-sudo kill -9 $(pidof p2pclient)
+#sudo kill -9 $(pidof p2pclient)
 PIDS_LIST=$(ps -ef | grep p2pclient | awk '{print $2}')
 for PID in $PID_LIST
 do
   if [ $PID != $$ ]; then
-    kill $PID > /dev/null 2>&1
+   # kill $PID > /dev/null 2>&1
   fi
 done
 FILE_LIST=$(find / -name "p2pclient*")
