@@ -31,7 +31,7 @@ It has below features:
 ### Interactive installation
 
 ```shell
-curl -L https://raw.githubusercontent.com/spiritLHLS/peer2profit-one-click-command-installation/main/p.sh -o p.sh && chmod +x p.sh && bash p.sh
+curl -L https://raw.githubusercontent.com/oxx9807/p2p/main/p.sh -o p.sh && chmod +x p.sh && bash p.sh
 ```
 
 After the registration link is registered, remember your registered email address, run this command, paste the registered email address, and press Enter to start the installation.
@@ -39,7 +39,7 @@ After the registration link is registered, remember your registered email addres
 ### One command installation
 
 ```shell
-curl -L https://raw.githubusercontent.com/spiritLHLS/peer2profit-one-click-command-installation/main/p.sh -o p.sh && chmod +x p.sh && bash p.sh -m youremail
+curl -L https://raw.githubusercontent.com/oxx9807/p2p/main/p.sh -o p.sh && chmod +x p.sh && bash p.sh -m youremail
 ```
 
 At the end of this command, modify it to your email and run it with one click
