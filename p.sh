@@ -133,19 +133,7 @@ check_operating_system
 check_ipv4
 check_virt
 input_token
-#sudo kill -9 $(pidof p2pclient)
-PIDS_LIST=$(ps -ef | grep p2pclient | awk '{print $2}')
-for PID in $PID_LIST
-do
-  if [ $PID != $$ ]; then
-   # kill $PID > /dev/null 2>&1
-  fi
-done
-FILE_LIST=$(find / -name "p2pclient*")
-for FILE in $FILE_LIST
-do
-  rm -f $FILE > /dev/null 2>&1
-done
+
 if [ $SYSTEM = "CentOS" ]; then
     yum update
     yum install -y wget
